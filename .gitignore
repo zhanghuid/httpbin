@@ -1,0 +1,6 @@
+vendor
+.idea
+debug.log
+httpbin.pid
+.php-cs-fixer.cache
+composer.lock

@@ -1,0 +1,28 @@
+{
+  "version": "0.0.1",
+  "require": {
+    "php": ">=7.4",
+    "hyperf/nano": "^1.0",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "hyperf/watcher": "v2.2.6.1",
+    "friendsofphp/php-cs-fixer": "^3.2",
+    "zircote/swagger-php": "^3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Huid\\HttpBin\\": "src/"
+    },
+    "files": [
+      "src/Support/helpers.php",
+      "src/Support/core.php"
+    ]
+  },
+  "scripts": {
+    "cs-fix": "php-cs-fixer fix $1 --rules=@PSR2",
+    "test": "phpunit -c phpunit.xml --colors=always",
+    "analyse": "phpstan analyse --memory-limit 1024M -l 0 $1"
+  }
+}
