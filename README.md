@@ -30,6 +30,8 @@ php swagger.php
 php `which composer` run-script cs-fix ./
 ```
 
+### demo
+> http://httpbin.mykeep.fun
 
 ### 灵感
 [httpbin](http://httpbin.org)
