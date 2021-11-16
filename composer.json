@@ -3,7 +3,10 @@
   "require": {
     "php": ">=7.4",
     "hyperf/nano": "^1.0",
-    "ext-json": "*"
+    "ext-json": "*",
+    "hyperf/view": "^2.2",
+    "hyperf/view-engine": "^2.2",
+    "hyperf/task": "^2.2"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",

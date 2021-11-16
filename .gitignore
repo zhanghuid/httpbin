@@ -4,3 +4,8 @@ debug.log
 httpbin.pid
 .php-cs-fixer.cache
 composer.lock
+src/static/*.png
+src/static/*.js
+src/static/*.map
+src/static/*.css
+src/static/*.yaml

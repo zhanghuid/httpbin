@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Huid\HttpBin\Support;
 use OpenApi\Annotations as OA;
+use Hyperf\View\RenderInterface;
 
 /**
  * @OA\Info(
@@ -54,11 +55,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 */
 $app = require __DIR__.'/src/Support/core.php';
 
-$app->get('/', function () {
-    return [
-        'message' => "Hello php httpbin",
-        'version' => '0.0.1',
-    ];
+$app->get('/', function (RenderInterface $render) {
+    return $render->render('index');
 });
 
 /**
