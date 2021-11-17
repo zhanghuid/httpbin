@@ -1,7 +1,7 @@
 ## 一个 php 版的 httpbin
 
 ### demo
-> http://httpbin.mykeep.fun
+> https://httpbin.mykeep.fun
 
 ### 安装
 1. 检查环境依赖
