@@ -25,6 +25,12 @@ use Hyperf\View\RenderInterface;
  * )
  */
 
+/**
+ *  @OA\Tag(
+ *   name="HTTP Methods",
+ *   description="Testing different HTTP verbs"
+ * )
+ */
 
 /*
 |--------------------------------------------------------------------------
@@ -65,7 +71,8 @@ $app->get('/', function (RenderInterface $render) {
  * @OA\Get(
  *   path="/get",
  *   description="The request's query parameters.",
- *   @OA\Response(response=200, description="The request's query parameters.")
+ *   @OA\Response(response=200, description="The request's query parameters."),
+ *   tags={"HTTP Methods"}
  * )
  */
 $app->get('/get', function () {
@@ -80,7 +87,8 @@ $app->get('/get', function () {
  *     @OA\Response(
  *         response=200,
  *         description="The request's PUT parameters."
- *     )
+ *     ),
+ *     tags={"HTTP Methods"}
  * )
  */
 $app->put('/put', function () {
@@ -95,7 +103,8 @@ $app->put('/put', function () {
  *     @OA\Response(
  *         response=200,
  *         description="The request's POST parameters."
- *     )
+ *     ),
+ *     tags={"HTTP Methods"}
  * )
  */
 $app->post('/post', function () {
@@ -110,7 +119,8 @@ $app->post('/post', function () {
  *     @OA\Response(
  *         response=200,
  *         description="The request's DELETE parameters."
- *     )
+ *     ),
+ *     tags={"HTTP Methods"}
  * )
  */
 $app->delete('/delete', function () {
@@ -124,7 +134,8 @@ $app->delete('/delete', function () {
  *     @OA\Response(
  *         response=200,
  *         description="The request's PATCH parameters."
- *     )
+ *     ),
+ *     tags={"HTTP Methods"}
  * )
  */
 $app->patch('/patch', function () {
