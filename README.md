@@ -94,7 +94,13 @@ stdout_logfile_backups=20
 
 ### 部署 - docker
 ```
+# build 
 docker build -f ./Dockerfile -t httpbin .
+# run container
+docker run -d httpbin
+
+# test
+curl 'http://127.0.0.1:9501/get'
 ```
 
 ### 灵感
