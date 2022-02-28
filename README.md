@@ -92,6 +92,11 @@ stdout_logfile_backups=20
 
 ```
 
+### 部署 - docker
+```
+docker build -f ./Dockerfile -t httpbin .
+```
+
 ### 灵感
 [httpbin](http://httpbin.org)
 
