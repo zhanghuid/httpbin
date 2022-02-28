@@ -6,7 +6,8 @@
     "ext-json": "*",
     "hyperf/view": "^2.2",
     "hyperf/view-engine": "^2.2",
-    "hyperf/task": "^2.2"
+    "hyperf/task": "^2.2",
+    "symfony/thanks": "^1.2"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
@@ -27,5 +28,5 @@
     "cs-fix": "php-cs-fixer fix $1 --rules=@PSR2",
     "test": "phpunit -c phpunit.xml --colors=always",
     "analyse": "phpstan analyse --memory-limit 1024M -l 0 $1"
-  }
+    }
 }

@@ -15,12 +15,12 @@ use Hyperf\View\RenderInterface;
 
 /**
  * @OA\Server(
- *      url="{schema}://127.0.0.1:9501",
+ *      url="{schema}://httpbin.mykeep.fun",
  *      description="OpenApi parameters",
  *      @OA\ServerVariable(
  *          serverVariable="schema",
  *          enum={"https", "http"},
- *          default="http"
+ *          default="https"
  *      )
  * )
  */
@@ -59,7 +59,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 |
 |
 */
-$app = require __DIR__.'/src/Support/core.php';
+$app = require __DIR__ . '/src/Support/core.php';
 
 $app->get('/', function (RenderInterface $render) {
     return $render->render('index');
@@ -140,6 +140,14 @@ $app->delete('/delete', function () {
  */
 $app->patch('/patch', function () {
     return Support\get_dict("url", "args", "form", "data", "origin", "headers", "files", "json");
+});
+
+
+/**
+ * render openapi.yaml for swagger ui
+ */
+$app->get('/openapi', function (Hyperf\HttpServer\Contract\ResponseInterface $render) {
+    return $render->raw(file_get_contents('./src/static/openapi.yaml'));
 });
 
 
