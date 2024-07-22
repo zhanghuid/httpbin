@@ -1,8 +1,5 @@
 ## 一个 php 版的 httpbin
 
-### demo
-> https://httpbin.mykeep.fun
-
 ### 安装
 1. 检查环境依赖
 ```php
@@ -42,7 +39,7 @@ upstream httpbin {
 
 server {
 	listen       80;
-	server_name httpbin.mykeep.fun;
+	server_name httpbin.whoops.space;
 
         location /static/ {
 	   index index.html;
